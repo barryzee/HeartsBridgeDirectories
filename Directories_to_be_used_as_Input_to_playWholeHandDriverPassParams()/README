@@ -1,1 +1,28 @@
+Command lines for invoking playWholeHandDriverPassParams()
+  for the example bridge and hearts hands
 
+# good authentic bridge hand
+playWholeHandDriverPassParams(
+manualUpdateProbs=TRUE,
+dir="/Volumes/Lacie_mini_2TB/bridge.minusS/tcpflow.subd2/processed_example2.subdir",
+hand=1,
+game="bridge",
+example=FALSE,
+display=c(1,3),thresh=0.7,annot=TRUE)
+
+# pretty good locate QS !!
+# display=1:4 would specify displaying all 4 hands (i.e., "double dummy")
+# thresh=0 would specify no specific threshold probability for displaying
+#		the card in unknown hand
+#		Instead, the card displayed for the player having the highest probability
+#		for the card 
+playWholeHandDriverPassParams(
+manualUpdateProbs=TRUE,
+dir="/Volumes/Lacie_mini_2TB/tcpflow.minusS_/tcpflow.out01_19_2023_19_49_34.subd/processed__01_19_2023_20_06_44.subdir",
+hand=9,
+game="hearts",
+pass.direction="l",
+example=FALSE,
+TTS_ALL=FALSE,
+TTS_BASIC=FALSE,
+display=1,thresh=0.7,annot=FALSE)
